@@ -90,7 +90,7 @@ to transform from hg19 to hg38 is
 ## Building this project
 
 1. git clone this repository.
-1. Use a recent version of [Apache Maven](http://maven.apache.org/download.cgi) 
+1. Use a recent version of [Apache Maven](http://maven.apache.org/download.cgi)
 (e.g., version 3.3.3) to build this code:
 
 ```
@@ -110,20 +110,22 @@ it generates two output files:
 The program is executed as follows:
 
 ```bash
-java -jar target/verilylifesciences-genomewarp-1.0.0-runnable.jar \
-  --lift_over_chain_path="${chain}" \
-  --raw_query_vcf="${queryvcf}" \
-  --raw_query_bed="${querybed}" \
-  --ref_query_fasta="${queryfasta}" \
-  --ref_target_fasta="${targetfasta}" \
-  --work_dir="${workdir}" \
-  --output_variants_file="${targetvcf}" \
-  --output_regions_file="${targetbed}"
+java -jar target/verilylifesciences-genomewarp-1.2.1-runnable.jar \
+  --lift_over_chain_path "${chain}" \
+  --raw_query_vcf "${queryvcf}" \
+  --raw_query_bed "${querybed}" \
+  --ref_query_fasta "${queryfasta}" \
+  --ref_target_fasta "${targetfasta}" \
+  --work_dir "${workdir}" \
+  --output_variants_file "${targetvcf}" \
+  --output_regions_file "${targetbed}"
 ```
 
 When run, logging statements provide progress indications. GenomeWarp should
 convert a single-sample VCF containing millions of variants genome-wide in under
 30 minutes.
+
+Run the program with no arguments to see the usage message and additional flags.
 
 ## Notes
 There are multiple reasons why a confidently-called region in the query assembly
